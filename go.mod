@@ -1,4 +1,4 @@
-module github.com/gjugigibnbniu/gpython
+module github.com/jugigibnbniu/gpython
 
 go 1.18
 
