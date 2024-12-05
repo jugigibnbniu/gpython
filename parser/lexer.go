@@ -310,7 +310,18 @@ type LexToken struct {
 	pos   ast.Pos
 }
 
-// ...
+func (lt *LexToken) Pos() ast.Pos {
+	return lt.pos
+}
+
+func (lt *LexToken) Value() py.Object {
+	return lt.value
+}
+
+func (lt *LexToken) Name() string {
+	return tokenToString[lt.token]
+}
+
 // Convert the yySymType and token into a LexToken
 func newLexToken(token int, yylval *yySymType) (lt LexToken) {
 	lt.token = token
