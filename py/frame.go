@@ -6,6 +6,8 @@
 
 package py
 
+import "strings"
+
 // What kind of block this is
 type TryBlockType byte
 
@@ -135,7 +137,23 @@ func (f *Frame) Lookup(name string) (obj Object, ok bool) {
 		return
 	}
 
-	return f.LookupGlobal(name)
+	if obj, ok = f.LookupGlobal(name); ok {
+		return
+	}
+
+	if parts := strings.Split(name, "."); len(parts) > 1 {
+		if element, ok := f.Lookup(parts[0]); ok {
+			for _, part := range parts[1:] {
+				if module, ok := element.(*Module); ok {
+					if obj, ok := module.Globals[part]; ok {
+						return obj, true
+					}
+				}
+			}
+		}
+	}
+
+	return nil, false
 }
 
 // Make a new Block (try/for/while)
