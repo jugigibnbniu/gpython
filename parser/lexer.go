@@ -310,6 +310,7 @@ type LexToken struct {
 	pos   ast.Pos
 }
 
+// .
 // Convert the yySymType and token into a LexToken
 func newLexToken(token int, yylval *yySymType) (lt LexToken) {
 	lt.token = token
