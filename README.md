@@ -1,9 +1,9 @@
 # gpython
 
-[![Build Status](https://github.com/jugigibnbniu/gpython/workflows/CI/badge.svg)](https://github.com/jugigibnbniu/gpython/actions)
+[![Build Status](https://github.com/go-python/gpython/workflows/CI/badge.svg)](https://github.com/go-python/gpython/actions)
 [![codecov](https://codecov.io/gh/go-python/gpython/branch/main/graph/badge.svg)](https://codecov.io/gh/go-python/gpython)
-[![GoDoc](https://godoc.org/github.com/jugigibnbniu/gpython?status.svg)](https://godoc.org/github.com/jugigibnbniu/gpython)
-[![License](https://img.shields.io/badge/License-BSD--3-blue.svg)](https://github.com/jugigibnbniu/gpython/blob/main/LICENSE)
+[![GoDoc](https://godoc.org/github.com/go-python/gpython?status.svg)](https://godoc.org/github.com/go-python/gpython)
+[![License](https://img.shields.io/badge/License-BSD--3-blue.svg)](https://github.com/go-python/gpython/blob/main/LICENSE)
 
 gpython is a part re-implementation, part port of the Python 3.4
 interpreter in Go.  Although there are many areas of improvement,
@@ -33,7 +33,7 @@ Download directly from the [releases page](https://github.com/go-python/gpython/
 
 Or if you have Go installed:
 
-    go install github.com/jugigibnbniu/gpython
+    go install github.com/go-python/gpython
 
 ## Objectives
 
@@ -54,7 +54,7 @@ gpython currently:
  - Supports concurrent multi-interpreter ("multi-context") execution
 
 Speed hasn't been a goal of the conversions however it runs pystone at
-about 20% of the speed of CPython.  A [π computation test](https://github.com/jugigibnbniu/gpython/tree/main/examples/pi_chudnovsky_bs.py) runs quicker under
+about 20% of the speed of CPython.  A [π computation test](https://github.com/go-python/gpython/tree/main/examples/pi_chudnovsky_bs.py) runs quicker under
 gpython as the Go long integer primitives are likely faster than the
 Python ones.
 
@@ -63,15 +63,15 @@ you know would be interested to take it futher, it would be much appreciated.
 
 ## Getting Started
 
-The [embedding example](https://github.com/jugigibnbniu/gpython/tree/main/examples/embedding) demonstrates how to
+The [embedding example](https://github.com/go-python/gpython/tree/main/examples/embedding) demonstrates how to
 easily embed and invoke gpython from any Go application.
 
 Of interest, gpython is able to run multiple interpreter instances simultaneously,
 allowing you to embed gpython naturally into your Go application.  This makes it
 possible to use gpython in a server situation where complete interpreter 
-independence is paramount.  See this in action in the [multi-context example](https://github.com/jugigibnbniu/gpython/tree/main/examples/multi-context).
+independence is paramount.  See this in action in the [multi-context example](https://github.com/go-python/gpython/tree/main/examples/multi-context).
  
-If you are looking to get involved, a light and easy place to start is adding more convenience functions to [py/util.go](https://github.com/jugigibnbniu/gpython/tree/main/py/util.go).  See [notes.txt](https://github.com/jugigibnbniu/gpython/blob/main/notes.txt) for bigger ideas.
+If you are looking to get involved, a light and easy place to start is adding more convenience functions to [py/util.go](https://github.com/go-python/gpython/tree/main/py/util.go).  See [notes.txt](https://github.com/go-python/gpython/blob/main/notes.txt) for bigger ideas.
 
 
 ## Other Projects of Interest
