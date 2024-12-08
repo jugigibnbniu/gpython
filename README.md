@@ -29,7 +29,7 @@ modules are written in C not python.  The converted modules are:
 
 ## Install
 
-Download directly from the [releases page](https://github.com/jugigibnbniu/gpython/releases) 
+Download directly from the [releases page](https://github.com/go-python/gpython/releases) 
 
 Or if you have Go installed:
 
